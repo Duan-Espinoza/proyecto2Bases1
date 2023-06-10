@@ -1,3 +1,12 @@
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/othneildrew/Best-README-Template">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Firma_TEC.svg/1200px-Firma_TEC.svg.png" alt="Logo" width="500" height="80">
+  </a>
+</div>
+
+
 # Proyecto 2 BlockBuster-App
 
 * Nombre: Duan Antonio Espinoza Olivares
