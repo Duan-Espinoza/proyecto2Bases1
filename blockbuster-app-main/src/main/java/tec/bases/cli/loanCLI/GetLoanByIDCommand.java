@@ -1,0 +1,40 @@
+package tec.bases.cli.loanCLI;
+
+//Librerias
+import java.sql.SQLException;
+import java.util.List;
+
+import picocli.CommandLine;
+import picocli.CommandLine.Command;
+import tec.bases.ApplicationContext;
+import tec.bases.entity.Loan;
+
+/**
+ * Comando para obtener un préstamo por su ID.
+ */
+@Command(name = "loanrid", description = "Return loan by id")
+public class GetLoanByIDCommand implements Runnable {
+
+    @CommandLine.Parameters(paramLabel = "<film ID>", description = "Film ID")
+    private int filmID;
+
+    @Override
+    public void run() {
+        var blockbuster = new ApplicationContext().getBlockbuster();
+        try {
+            var loanList = blockbuster.findLoanByID(filmID);
+            showInfo(loanList);
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    private void showInfo(List<Loan> _list) {
+        System.out.println("LOAN_ID    FILM_ID    CLIENT_ID        DATE        DEVOLUTION_DATE     STATE");
+        if (!_list.isEmpty()) {
+            for (int indx = 0; indx < _list.size(); indx++) {
+                System.out.println(_list.get(indx).toString());
+            }
+        }
+    }
+}
