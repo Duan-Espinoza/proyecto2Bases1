@@ -7,7 +7,7 @@
 
 Proyecto 2 para el curso curso de Bases de datos 1.
 
-Esta deberia de contar con los metodos CRUD's para el mantenimiento de 4 tablas dentro de la base de datos.
+
 
 ##### NOTA: La ejecución del programa hace uso de Apache Maven ( https://maven.apache.org/ )
 
@@ -110,6 +110,8 @@ mvn exec:java -Dexec.args="movu 11 Titanic 1997-17-12 4"
 
  ### Tabla Film:
  No implementada 
+ Razones:
+ 1- La falta de tiempo hizo que no se pudiera terminar las implementaciones pendientes de Film, por lo que...por orden de sacar el proyecto a tiempo, se decidió prescindir de sto
 
 
  
